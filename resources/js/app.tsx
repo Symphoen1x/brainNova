@@ -7,6 +7,27 @@ import { initializeTheme } from './hooks/use-appearance';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
+// Static deployment: map URL paths to correct Inertia page components
+// Firebase serves index.html for all routes, so we fix the initial page data
+const staticRouteMap: Record<string, string> = {
+    '/': 'welcome',
+    '/contact': 'contact',
+    '/blog': 'blog',
+    '/dashboard': 'dashboard',
+};
+
+const appEl = document.getElementById('app');
+if (appEl) {
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+    const component = staticRouteMap[currentPath];
+    if (component) {
+        const pageData = JSON.parse(appEl.dataset.page || '{}');
+        pageData.component = component;
+        pageData.url = currentPath;
+        appEl.dataset.page = JSON.stringify(pageData);
+    }
+}
+
 createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),
     resolve: (name) =>

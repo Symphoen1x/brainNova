@@ -1,4 +1,4 @@
-# BrainNova — Project Report
+# Brainova — Project Report
 
 **Tanggal**: 19 Februari 2026  
 **Versi**: 1.0.0  
@@ -8,7 +8,7 @@
 
 ## 1. Ringkasan Proyek
 
-BrainNova adalah platform teknologi berbasis AI dan neurosains kognitif yang dirancang untuk meningkatkan kualitas pembelajaran dan kesejahteraan mental. Aplikasi ini dibangun di atas stack modern Laravel 12 + Inertia.js + React + TypeScript dengan antarmuka yang futuristik, dark-first, dan mendukung SDG (Sustainable Development Goals) PBB.
+Brainova adalah platform teknologi berbasis AI dan neurosains kognitif yang dirancang untuk meningkatkan kualitas pembelajaran dan kesejahteraan mental. Aplikasi ini dibangun di atas stack modern Laravel 12 + Inertia.js + React + TypeScript dengan antarmuka yang futuristik, dark-first, dan mendukung SDG (Sustainable Development Goals) PBB.
 
 ---
 
@@ -50,7 +50,7 @@ brainNova/
 │       └── 2025_08_15_000000_create_newsletter_subscribers_table.php
 ├── resources/
 │   ├── css/
-│   │   └── app.css                         ← BrainNova theme (oklch blue/cyan)
+│   │   └── app.css                         ← Brainova theme (oklch blue/cyan)
 │   └── js/
 │       ├── components/
 │       │   ├── landing/
@@ -63,7 +63,7 @@ brainNova/
 │       │   │   ├── blog-card.tsx           ← Article preview card
 │       │   │   ├── contact-form.tsx        ← Inertia useForm contact form
 │       │   │   └── newsletter-form.tsx     ← Email subscribe form
-│       │   ├── app-logo.tsx                ← BrainNova logo text
+│       │   ├── app-logo.tsx                ← Brainova logo text
 │       │   └── app-logo-icon.tsx           ← Brain SVG icon
 │       ├── layouts/
 │       │   └── landing-layout.tsx          ← Shared navbar + footer wrapper
@@ -186,7 +186,7 @@ Menggunakan **Laravel Fortify** dengan fitur:
 
 ---
 
-## 9. Produk BrainNova
+## 9. Produk Brainova
 
 ### OLYRA
 Platform pembelajaran adaptif berbasis AI + neurosains. Menganalisis pola kognitif pengguna untuk personalisasi konten pembelajaran secara real-time.
@@ -223,4 +223,4 @@ Aplikasi kesehatan mental berbasis neurofeedback dan pemantauan EEG non-invasif 
 
 ---
 
-*Generated: 19 Februari 2026 | BrainNova v1.0.0*
+*Generated: 19 Februari 2026 | Brainova v1.0.0*

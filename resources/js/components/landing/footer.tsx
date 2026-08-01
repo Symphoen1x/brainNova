@@ -1,11 +1,10 @@
-import { Link } from '@inertiajs/react';
-import { Brain, Github, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 
 const footerLinks = {
     layanan: [
-        { name: 'Neuralis', href: '#' },
-        { name: 'Neuro Academy', href: '#' },
-        { name: 'FUMORIVE', href: '#' },
+        { name: 'Neuralis', href: 'https://fumorive-git-main-apypzs-projects.vercel.app/' },
+        { name: 'Neuro Academy', href: 'https://neuroacademy.id/' },
+        { name: 'FUMORIVE', href: 'https://fumorive.id/' },
     ],
     perusahaan: [
         { name: 'About', href: '/#about' },
@@ -32,14 +31,13 @@ export function Footer() {
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                     {/* Brand */}
                     <div className="lg:col-span-1">
-                        <Link href="/" className="mb-4 flex items-center gap-2">
-                            <div className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                                <Brain className="size-5" />
-                            </div>
-                            <span className="text-lg font-bold tracking-tight">
-                                Brain<span className="text-primary">Nova</span>
-                            </span>
-                        </Link>
+                        <a href="/" className="mb-4 flex items-center gap-2">
+                            <img
+                                src="/brainova2.png"
+                                alt="BrainNova Logo"
+                                className="h-9 w-auto object-contain"
+                            />
+                        </a>
                         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                             Platform Neuro-AI berbasis analisis sinyal otak (EEG) untuk optimalisasi
                             kesehatan mental, pendidikan, dan keselamatan publik.
@@ -49,8 +47,6 @@ export function Footer() {
                                 <a
                                     key={social.label}
                                     href={social.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
                                     className="flex size-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
                                     aria-label={social.label}
                                 >
@@ -70,8 +66,6 @@ export function Footer() {
                                 <li key={link.name}>
                                     <a
                                         href={link.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
                                         className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                                     >
                                         {link.name}
@@ -89,12 +83,12 @@ export function Footer() {
                         <ul className="space-y-3">
                             {footerLinks.perusahaan.map((link) => (
                                 <li key={link.name}>
-                                    <Link
+                                    <a
                                         href={link.href}
                                         className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                                     >
                                         {link.name}
-                                    </Link>
+                                    </a>
                                 </li>
                             ))}
                         </ul>

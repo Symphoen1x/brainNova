@@ -1,6 +1,6 @@
-# BrainNova — Quick Start Guide
+# Brainova — Quick Start Guide
 
-Panduan cepat menjalankan proyek BrainNova di environment lokal (Windows).
+Panduan cepat menjalankan proyek Brainova di environment lokal (Windows).
 
 ---
 
@@ -47,7 +47,7 @@ php artisan key:generate
 Edit file `.env` dan sesuaikan:
 
 ```env
-APP_NAME=BrainNova
+APP_NAME=Brainova
 APP_URL=http://localhost:8000
 
 # Database (SQLite untuk development)
@@ -61,7 +61,7 @@ MAIL_PORT=587
 MAIL_USERNAME=your@email.com
 MAIL_PASSWORD=your-app-password
 MAIL_FROM_ADDRESS=hello@brainnova.id
-MAIL_FROM_NAME="BrainNova"
+MAIL_FROM_NAME="Brainova"
 ```
 
 ---
@@ -254,4 +254,4 @@ php artisan make:mail ContactMessage --markdown=emails.contact
 
 ---
 
-*BrainNova v1.0.0 | Laravel 12 + React 19 + TypeScript + Tailwind CSS v4*
+*Brainova v1.0.0 | Laravel 12 + React 19 + TypeScript + Tailwind CSS v4*

@@ -143,6 +143,10 @@
         @apply border-border;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         @apply bg-background text-foreground;
     }
@@ -150,7 +154,7 @@
 
 @layer utilities {
     .glass {
-        @apply bg-white/60 backdrop-blur-xl border border-white/20 dark:bg-white/[0.04] dark:border-white/[0.08];
+        @apply bg-white/60 border border-white/20 backdrop-blur-xl dark:bg-white/4 dark:border-white/8;
     }
 
     .glow {

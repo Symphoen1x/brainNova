@@ -65,8 +65,6 @@ export function ServiceCard({
                 <span className="text-xs font-medium text-muted-foreground">{price}</span>
                 <a
                     href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:underline"
                 >
                     Kunjungi Platform

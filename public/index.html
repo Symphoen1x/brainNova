@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script>
+            (function() {
+                const appearance = 'system';
+                if (appearance === 'system') {
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (prefersDark) {
+                        document.documentElement.classList.add('dark');
+                    }
+                }
+            })();
+        </script>
+
+        <style>
+            html { background-color: oklch(1 0 0); }
+            html.dark { background-color: oklch(0.145 0 0); }
+        </style>
+
+        <title>Brainova</title>
+
+        <link rel="icon" href="/favicon.svg?v=20260329" type="image/svg+xml" sizes="any">
+        <link rel="shortcut icon" href="/favicon.svg?v=20260329" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260329">
+
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
+        <script type="module">
+            (async function () {
+                const manifestResponse = await fetch('/build/manifest.json', { cache: 'no-store' });
+
+                if (!manifestResponse.ok) {
+                    throw new Error('Unable to load build manifest');
+                }
+
+                const manifest = await manifestResponse.json();
+                const entry = manifest['resources/js/app.tsx'];
+
+                if (!entry) {
+                    throw new Error('Missing Vite entry in manifest');
+                }
+
+                if (entry.css) {
+                    for (const href of entry.css) {
+                        const link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.href = '/build/' + href;
+                        document.head.appendChild(link);
+                    }
+                }
+
+                const script = document.createElement('script');
+                script.type = 'module';
+                script.src = '/build/' + entry.file;
+                document.head.appendChild(script);
+            })().catch((error) => {
+                console.error(error);
+                document.body.innerHTML = '<pre style="white-space:pre-wrap;padding:16px;font:14px/1.5 monospace;">Brainova failed to load build assets. Open DevTools Console for details.</pre>';
+            });
+        </script>
+    </head>
+    <body class="font-sans antialiased">
+        <div id="app" data-page='{"component":"welcome","props":{},"url":"/","version":null}'></div>
+    </body>
+</html>
+

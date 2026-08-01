@@ -1,6 +1,7 @@
 import { Head } from '@inertiajs/react';
 import { Navbar } from '@/components/landing/navbar';
 import { Footer } from '@/components/landing/footer';
+import { useEffect } from 'react';
 import type { PropsWithChildren } from 'react';
 
 interface LandingLayoutProps extends PropsWithChildren {
@@ -8,6 +9,29 @@ interface LandingLayoutProps extends PropsWithChildren {
 }
 
 export default function LandingLayout({ title, children }: LandingLayoutProps) {
+    useEffect(() => {
+        const scrollToCurrentHash = (): void => {
+            const hash = window.location.hash;
+
+            if (!hash) return;
+
+            if (hash === '#top') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+
+            const element = document.getElementById(hash.slice(1));
+            element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+
+        scrollToCurrentHash();
+        window.addEventListener('hashchange', scrollToCurrentHash);
+
+        return () => {
+            window.removeEventListener('hashchange', scrollToCurrentHash);
+        };
+    }, []);
+
     return (
         <>
             <Head title={title}>

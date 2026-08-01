@@ -34,48 +34,42 @@ const contactInfo = [
 export default function Contact() {
     return (
         <LandingLayout title="Contact">
-            {/* Header */}
-            <section className="relative overflow-hidden py-20 sm:py-28">
+            <section className="relative overflow-hidden py-20 sm:py-24">
                 <div className="mesh-gradient absolute inset-0" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--background)_75%)]" />
-                <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <SectionHeading
-                        badge="Hubungi Kami"
-                        title="Mari"
-                        highlight="Berkolaborasi"
-                        description="Tertarik dengan solusi Neuro-AI untuk institusi Anda? Hubungi kami untuk konsultasi, demo, atau kemitraan."
-                    />
-                </div>
-            </section>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--background)_78%)]" />
+                <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px)', backgroundSize: '72px 72px' }} />
 
-            {/* Content */}
-            <section className="py-16 sm:py-24">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid gap-12 lg:grid-cols-5">
-                        {/* Contact Form */}
-                        <div className="lg:col-span-3">
-                            <div className="rounded-2xl border border-border/50 bg-card p-6 sm:p-8">
-                                <div className="mb-6">
-                                    <h3 className="text-xl font-bold">Kirim Pesan</h3>
-                                    <p className="mt-1 text-sm text-muted-foreground">
-                                        Isi formulir di bawah dan kami akan menghubungi Anda sesegera
-                                        mungkin.
-                                    </p>
-                                </div>
-                                <ContactForm />
+                <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-3xl">
+                        <SectionHeading
+                            badge="Hubungi Kami"
+                            title="Mari"
+                            highlight="Berkolaborasi"
+                            description="Tertarik dengan solusi Neuro-AI untuk institusi Anda? Hubungi kami untuk konsultasi, demo, atau kemitraan."
+                            align="left"
+                        />
+                    </div>
+
+                    <div className="mt-14 grid gap-12 lg:grid-cols-[1.4fr_0.9fr] lg:items-start">
+                        <div className="rounded-3xl border border-border/50 bg-card/90 p-6 shadow-2xl shadow-black/5 backdrop-blur xl:p-8">
+                            <div className="mb-6">
+                                <h3 className="text-2xl font-bold">Kirim Pesan</h3>
+                                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                                    Isi formulir di bawah dan kami akan menghubungi Anda sesegera
+                                    mungkin.
+                                </p>
                             </div>
+                            <ContactForm />
                         </div>
 
-                        {/* Contact Info */}
-                        <div className="space-y-6 lg:col-span-2">
-                            {/* Info Cards */}
+                        <div className="space-y-6">
                             {contactInfo.map((info) => (
                                 <div
                                     key={info.label}
                                     className="glass group rounded-2xl p-5 transition-all duration-300 hover:glow"
                                 >
                                     <div className="flex items-start gap-4">
-                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                        <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                             <info.icon className="size-5" />
                                         </div>
                                         <div>
@@ -93,10 +87,9 @@ export default function Contact() {
                                 </div>
                             ))}
 
-                            {/* Newsletter */}
                             <div className="glass rounded-2xl p-5">
                                 <div className="mb-4 flex items-center gap-3">
-                                    <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                    <div className="flex size-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                         <Brain className="size-5" />
                                     </div>
                                     <div>
@@ -114,7 +107,7 @@ export default function Contact() {
             </section>
 
             {/* Partners CTA */}
-            <section className="border-t border-border bg-muted/30 py-16">
+            {/* <section className="border-t border-border bg-muted/30 py-16">
                 <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
                     <h3 className="text-xl font-bold">Tertarik Menjadi Mitra?</h3>
                     <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
@@ -135,7 +128,7 @@ export default function Contact() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
         </LandingLayout>
     );
 }

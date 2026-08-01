@@ -38,7 +38,7 @@ const services = [
             'Ekspor data terenkripsi CSV/PDF',
         ],
         price: 'Rp1,5 – 2,5 jt/bulan',
-        href: '#',
+        href: 'https://neuralis-b32aa.web.app/',
         gradient: 'bg-gradient-to-r from-cyan-500 to-blue-500',
     },
     {
@@ -54,7 +54,7 @@ const services = [
             'Integrasi dengan kurikulum sekolah',
         ],
         price: 'Rp0,5 – 1,5 jt/peserta',
-        href: '#',
+        href: 'https://neuroacademy-68f7d.web.app/',
         gradient: 'bg-gradient-to-r from-violet-500 to-purple-500',
     },
     {
@@ -70,7 +70,7 @@ const services = [
             'Laporan analisis kewaspadaan komprehensif',
         ],
         price: 'Rp10 – 20 jt/batch',
-        href: '#',
+        href: 'https://fumorive-git-main-apypzs-projects.vercel.app/',
         gradient: 'bg-gradient-to-r from-orange-500 to-red-500',
     },
 ];
@@ -152,7 +152,7 @@ export default function Welcome() {
             {/* ============================================ */}
             {/* HERO SECTION */}
             {/* ============================================ */}
-            <section className="relative overflow-hidden">
+            <section id="top" className="relative overflow-hidden">
                 {/* Background effects */}
                 <div className="mesh-gradient absolute inset-0" />
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--background)_75%)]" />
@@ -166,12 +166,12 @@ export default function Welcome() {
                     }}
                 />
 
-                <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
+                <div className="relative px-8 sm:px-6 py-9 sm:py-17 lg:px-8 ">
                     <div className="mx-auto max-w-4xl text-center">
                         {/* Badge */}
                         <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
                             <Sparkles className="size-4" />
-                            TRL 7 — Tervalidasi Operasional di Surakarta
+                            Neuro Technology Startup dari UNS
                         </div>
 
                         {/* Headline */}
@@ -196,7 +196,7 @@ export default function Welcome() {
                                     <ArrowRight className="ml-2 size-4" />
                                 </Button>
                             </a>
-                            <Link href="/contact">
+                            <a href="/contact">
                                 <Button
                                     variant="outline"
                                     size="lg"
@@ -204,7 +204,7 @@ export default function Welcome() {
                                 >
                                     Hubungi Kami
                                 </Button>
-                            </Link>
+                            </a>
                         </div>
 
                         {/* Trust badges */}
@@ -229,13 +229,13 @@ export default function Welcome() {
             {/* ============================================ */}
             {/* ABOUT SECTION */}
             {/* ============================================ */}
-            <section id="about" className="relative py-24 sm:py-32">
+            <section id="about" className="relative py-24 sm:py-28">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <SectionHeading
                         badge="Tentang Kami"
                         title="Startup Neurotechnology"
                         highlight="dari UNS"
-                        description="BrainNova dikembangkan oleh tim mahasiswa Universitas Sebelas Maret (UNS), mengintegrasikan perangkat EEG Muse dengan Neuro-AI Signal Processing Engine untuk analisis real-time gelombang otak—Delta, Theta, Alpha, Beta."
+                        description="Brainova dikembangkan oleh tim mahasiswa Universitas Sebelas Maret (UNS), mengintegrasikan perangkat EEG Muse dengan Neuro-AI Signal Processing Engine untuk analisis real-time gelombang otak—Delta, Theta, Alpha, Beta."
                     />
 
                     <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -302,7 +302,7 @@ export default function Welcome() {
             {/* ============================================ */}
             {/* SERVICES SECTION */}
             {/* ============================================ */}
-            <section id="services" className="relative py-24 sm:py-32">
+            <section id="services" className="relative py-24 sm:py-26">
                 <div className="absolute inset-0 bg-muted/30" />
                 <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <SectionHeading
@@ -312,7 +312,7 @@ export default function Welcome() {
                         description="Setiap layanan dirancang untuk menyasar sektor berbeda — kesehatan mental, pendidikan, dan keselamatan lalu lintas — dengan satu platform terintegrasi."
                     />
 
-                    <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-13 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {services.map((service) => (
                             <ServiceCard key={service.name} {...service} />
                         ))}
@@ -323,7 +323,7 @@ export default function Welcome() {
             {/* ============================================ */}
             {/* STATS SECTION */}
             {/* ============================================ */}
-            <section className="relative overflow-hidden py-24 sm:py-32">
+            {/* <section className="relative overflow-hidden py-24 sm:py-32">
                 <div className="mesh-gradient absolute inset-0" />
                 <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
                 <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -345,12 +345,11 @@ export default function Welcome() {
                         ))}
                     </div>
                 </div>
-            </section>
-
+            </section> */}    {/* Data potensi pasar */}
             {/* ============================================ */}
             {/* TECHNOLOGY SECTION */}
             {/* ============================================ */}
-            <section className="py-24 sm:py-32">
+            <section className="py-24 sm:py-26">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <SectionHeading
                         badge="Teknologi"
@@ -381,7 +380,7 @@ export default function Welcome() {
             {/* ============================================ */}
             {/* BLOG PREVIEW SECTION */}
             {/* ============================================ */}
-            <section className="relative py-24 sm:py-32">
+            <section id="blog" className="relative py-24 sm:py-32">
                 <div className="absolute inset-0 bg-muted/30" />
                 <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex items-end justify-between">
@@ -389,7 +388,7 @@ export default function Welcome() {
                             badge="Artikel Terbaru"
                             title="Insights &"
                             highlight="Updates"
-                            description="Perkembangan terbaru seputar neuroscience, AI, dan implementasi BrainNova."
+                            description="Perkembangan terbaru seputar neuroscience, AI, dan implementasi Brainova."
                             align="left"
                             className="max-w-xl"
                         />
@@ -429,6 +428,7 @@ export default function Welcome() {
                 <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                         Siap Mengoptimalkan{' '}
+                        <br />
                         <span className="gradient-text glow-text">Potensi Kognitif?</span>
                     </h2>
                     <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -437,13 +437,13 @@ export default function Welcome() {
                     </p>
 
                     <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                        <Link href="/contact">
-                            <Button size="lg" className="rounded-full px-8 text-base">
-                                Hubungi Kami
-                                <ArrowRight className="ml-2 size-4" />
-                            </Button>
-                        </Link>
-                        <Link href="/contact">
+                            <a href="/contact">
+                                <Button size="lg" className="rounded-full px-8 text-base">
+                                    Hubungi Kami
+                                    <ArrowRight className="ml-2 size-4" />
+                                </Button>
+                            </a>
+                        {/* <Link href="/contact">
                             <Button
                                 variant="outline"
                                 size="lg"
@@ -451,16 +451,16 @@ export default function Welcome() {
                             >
                                 Jadwalkan Demo
                             </Button>
-                        </Link>
+                        </Link> */}
                     </div>
 
                     {/* Newsletter */}
-                    <div className="mx-auto mt-16 max-w-md">
+                    {/* <div className="mx-auto mt-16 max-w-md">
                         <p className="mb-3 text-sm font-medium">
                             Subscribe untuk updates terbaru
                         </p>
                         <NewsletterForm variant="inline" />
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </LandingLayout>
